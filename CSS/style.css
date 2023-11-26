@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(205, 224, 184);
+}
+
+header {
+  width: 100%;
+  background-color: rgb(64, 82, 65);
+  color: white;
+  justify-content: center;
+  vertical-align: middle;
+  position: fixed;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-container ul {
+  display: flex;
+  list-style-type: none;
+  width: 400px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.header-container p {
+  margin-left: 5px;
+}
