@@ -62,13 +62,24 @@ header {
   color: green;
 }
 
-.profile-container {
+.profile-content {
   display: flex;
 }
 
-.profile-container img {
-  width: 400px;
-  height: 400px;
+.profile-content img {
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
-  margin: 30px 0 30px 20px;
+  margin: 30px 20px;
+}
+
+.profile-content h3 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.profile-content p {
+  font-size: 1em;
+  line-height: 200%;
+  margin-right: 30px;
 }
