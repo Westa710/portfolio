@@ -123,3 +123,31 @@ header {
   word-wrap:break-word;
   line-height:150%;
 }
+
+/* skill */
+
+.skill-content{
+  display:flex;
+  justify-content:space-around;
+}
+
+.skill-item1,.skill-item2{
+  border: 3px solid red;
+  text-align:center;
+
+}
+
+.skill-item1{
+  width:70%;
+}
+
+.skill-item2{
+  width:30%;
+}
+
+table{
+  table-layout:fixed;
+  width:100%;
+  margin:auto;
+}
+
