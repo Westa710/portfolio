@@ -136,15 +136,45 @@ header {
 }
 
 .skill-item1 {
-  width: 70%;
+  width: 60%;
 }
 
 .skill-item2 {
-  width: 30%;
+  width: 40%;
 }
 
 table {
   table-layout: fixed;
   width: 100%;
   margin: auto;
+}
+
+/* blog */
+.blog-link {
+  width: 500px;
+  height: 250px;
+  margin: 50px auto 0;
+  border: 3px solid blue;
+}
+
+/* contact */
+.contact-piccontainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-piccontainer-item {
+  text-align: center;
+}
+
+.contact-piccontainer-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* footer */
+footer {
+  padding: 30px 0 10px;
+  text-align: center;
 }
