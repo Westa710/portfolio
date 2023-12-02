@@ -35,7 +35,11 @@ header {
   width: 600px;
   justify-content: space-between;
   margin-left: auto;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+
+.header-container img {
+  border-radius: 40%;
 }
 
 .header-container p {
@@ -45,21 +49,28 @@ header {
 /* 見出し */
 
 .pagetop {
-  height: 900px;
-  width: 100%;
-  background-image: url(../images/top2.jpg);
-  background-size: cover;
-  background-position: center center;
   display: table;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(133, 205, 168);
 }
 
 .pagetop p {
   display: table-cell;
   vertical-align: middle;
-  padding-left: 5%;
-  font-size: 7rem;
+  text-align: center;
+  font-size: 10rem;
+  color: #eeeeee;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
+.pagetop i {
+  width: 50px;
+  height: 50px;
+  margin-top: 20vh;
+  font-size: 10rem;
+}
 .icon {
   display: flex;
   justify-content: center;
@@ -137,10 +148,12 @@ header {
 
 .skill-item1 {
   width: 60%;
+  height: 400px;
 }
 
 .skill-item2 {
   width: 40%;
+  height: 200px;
 }
 
 table {
@@ -155,7 +168,7 @@ table {
   height: 250px;
   margin: 50px auto 0;
   border: 3px solid blue;
-  border-radius: 5%;
+  border-radius: 10%;
 }
 
 /* contact */
@@ -172,6 +185,10 @@ table {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
+}
+
+.contact a:hover {
+  text-decoration-line: underline;
 }
 
 /* footer */
