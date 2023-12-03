@@ -140,51 +140,87 @@ header {
   justify-content: space-around;
 }
 
-.skill-item1,
-.skill-item2 {
-  border: 3px solid red;
+.skill-programming,
+.skill-certificate {
   text-align: center;
-}
-
-.skill-item1 {
-  width: 60%;
-  font-family: "Noto Serif JP", sans-serif;
-}
-
-.skill-item1 h3 {
-  margin-bottom: 20px;
-  font-size: 3rem;
-  font-weight: bolder;
 }
 
 .skill-programming {
-  width: 100%;
+  width: 60%;
+  color: #eeeeee;
+  background-color: rgb(100, 138, 73);
+}
+
+.skill-programming h3 {
+  font-size: 3rem;
+  margin: 20px 0;
+  font-weight: bolder;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.skill-programming p {
+  line-height: 100%;
+  padding: 0 100px 20px;
+}
+
+.skill-programming-main {
+  width: 90%;
   margin: auto;
-  border-collapse: collapse;
-  font-size: 2rem;
-}
-
-.skill-description {
-  width: 100%;
-  margin-top: 50px;
-
+  font-size: 1.5rem;
+  line-height: 4rem;
+  /* table style */
   border-collapse: collapse;
 }
 
-.skill-description caption {
+.skill-programming-main th {
+  text-align: center;
+  font-size: 1.3em;
+  /* table style */
+  border-bottom: 3px solid white;
+}
+
+.skill-programming-description {
+  width: 90%;
+  margin: 50px auto;
+
+  line-height: 3rem;
+}
+
+.skill-programming-description caption {
   text-align: center;
 }
 
-.skill-item2 {
+.skill-programming-description th {
+  text-align: center;
+  font-size: 1.3em;
+  border-bottom: 3px solid white;
+}
+
+.skill-programming-main tr:nth-child(2n),
+.skill-programming-description tr:nth-child(2n) {
+  background-color: rgb(127, 167, 98);
+}
+
+.skill-certificate {
   width: 40%;
+  margin: 20px 0;
   line-height: 20px;
 }
 
-.skill-item2 h3 {
+.skill-certificate h3 {
   font-size: 3rem;
-
+  margin-bottom: 20px;
   font-weight: bolder;
   font-family: "Noto Serif JP", sans-serif;
+}
+
+.skill-certificate p {
+  padding: 0 20px 20px;
+  line-height: 100%;
+}
+
+.skill-certificate li {
+  line-height: 150%;
 }
 
 /* blog */
