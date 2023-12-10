@@ -106,11 +106,15 @@ header a:hover {
   display: flex;
   justify-content: center;
   font-size: 70px;
-  padding: 100px 0 50px;
+  padding-bottom: 50px;
   color: green;
 }
 
 /* profile */
+
+.profile {
+  padding: 200px 0 100px;
+}
 
 .profile-content {
   display: flex;
@@ -144,6 +148,9 @@ header a:hover {
 
 /* works */
 
+.works {
+  margin: 100px 0;
+}
 .works-container {
   display: flex;
   flex-wrap: wrap;
@@ -177,9 +184,9 @@ header a:hover {
 
 /* skill */
 
-/* .skills {
-  
-} */
+.skill {
+  margin: 100px 0;
+}
 
 .skill-content {
   background-color: rgb(100, 138, 73);
@@ -303,6 +310,15 @@ header a:hover {
 }
 
 /* contact */
+.contact {
+  margin: 100px 0 100px;
+}
+
+.contact h1 {
+  text-align: center;
+  line-height: 200%;
+  padding: 50px 10% 100px;
+}
 .contact-piccontainer {
   display: flex;
   justify-content: space-around;
@@ -322,8 +338,20 @@ header a:hover {
   text-decoration-line: underline;
 }
 
+/* message */
+.message {
+  text-align: center;
+  background-color: aquamarine;
+  color: red;
+}
+
 /* footer */
 footer {
   padding: 30px 0 10px;
   text-align: center;
+  background-color: green;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
