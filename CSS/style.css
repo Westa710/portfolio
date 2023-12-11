@@ -1,11 +1,11 @@
 body {
   background-color: #e2dec9;
-  font-size: 25px;
+  font-size: 20px;
   color: #444444;
 }
 .main-wrapper {
   width: 80%;
-  min-width: 800px;
+  min-width: 600px;
   max-width: 1100px;
   height: 100%;
   margin: 0 auto;
@@ -130,15 +130,15 @@ header a:hover {
 }
 
 .profile-content h3 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: 50px;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 .profile-content p {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 200%;
-  padding: 0 50px 0 50px;
+  padding: 0 50px 0 30px;
 }
 
 .profile-item h3 {
@@ -231,7 +231,7 @@ header a:hover {
 .skill-programming-main th {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   /* table style */
   border-bottom: 3px solid white;
 }
@@ -255,7 +255,7 @@ header a:hover {
 .skill-programming-description th {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   border-bottom: 3px solid white;
 }
 
@@ -289,7 +289,7 @@ header a:hover {
 .list-head {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   border-bottom: 3px solid white;
   font-weight: bolder;
 }
@@ -354,7 +354,7 @@ header a:hover {
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Oswald", sans-serif;
   font-family: "Quicksand", sans-serif;
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 /* footer */
