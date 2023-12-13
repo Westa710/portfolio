@@ -5,7 +5,7 @@ body {
 }
 .main-wrapper {
   width: 80%;
-  min-width: 600px;
+  min-width: 700px;
   max-width: 1100px;
   height: 100%;
   margin: 0 auto;
@@ -18,7 +18,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-family: "Quicksand", sans-serif;
   font-size: 6rem;
-  color: rgb(95, 111, 82);
+  color: rgb(185, 148, 112);
 }
 
 .fa-user,
@@ -30,18 +30,17 @@ body {
   font-size: 80px;
   margin-right: 15px;
   transform: translateY(20px);
-  color: rgb(95, 111, 82);
+  color: rgb(185, 148, 112);
 }
 
 /* header */
 
 header {
   width: 100%;
-  height: 80px;
+  height: 50px;
   background-color: rgba(0, 0, 0, 0.699);
   color: rgb(143, 142, 142);
   justify-content: center;
-  vertical-align: middle;
   position: fixed;
   z-index: 2;
 }
@@ -53,12 +52,14 @@ header a:hover {
 .header-container {
   display: flex;
   align-items: center;
+  vertical-align: middle;
 }
 
 .header-container ul {
   display: flex;
   list-style-type: none;
   width: 500px;
+
   justify-content: space-between;
   margin-left: auto;
   margin-right: 30px;
@@ -71,8 +72,8 @@ header a:hover {
 
 .header-container img {
   border-radius: 20%;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
 }
 
 .header-container p {
@@ -82,18 +83,18 @@ header a:hover {
 /* 見出し */
 
 .pagetop {
-  display: table;
   height: 100vh;
   width: 100%;
-  background-color: rgb(169, 179, 136);
+  background-color: rgb(185, 148, 112);
 }
 
 .pagetop p {
-  display: table-cell;
-  vertical-align: middle;
+  padding-top: 20vh;
   text-align: center;
   font-size: 10rem;
   color: #eeeeee;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Oswald", sans-serif;
 }
@@ -101,7 +102,7 @@ header a:hover {
 .pagetop i {
   width: 50px;
   height: 50px;
-  margin-top: 20vh;
+  margin-top: 10vh;
   font-size: 10rem;
 }
 .icon {
@@ -160,22 +161,22 @@ header a:hover {
 }
 
 .works-item {
-  width: 300px;
-  height: 400px;
-  margin: 50px 30px;
+  width: 250px;
+  height: 300px;
+  margin: 30px 15px;
 }
 
 .works-item img {
   width: 100%;
   height: 50%;
-  background-color: lightgreen;
+  background-color: rgb(169, 179, 136);
 }
 
 .works-item p {
   width: 100%;
   height: 50%;
   padding: 10px;
-  background-color: rgb(211, 255, 196);
+  background-color: rgb(169, 179, 136);
   white-space: normal;
   word-wrap: break-word;
   line-height: 150%;
@@ -193,7 +194,7 @@ header a:hover {
 .skill-content {
   display: flex;
   justify-content: space-around;
-  background-color: #5f6f52;
+  background-color: rgb(185, 148, 112);
   color: white;
 }
 
@@ -204,7 +205,6 @@ header a:hover {
 
 .skill-programming {
   width: 60%;
-  color: #eeeeee;
 }
 
 .skill-programming h3 {
@@ -262,7 +262,7 @@ header a:hover {
 .skill-programming-main tr:nth-child(2n),
 .skill-programming-description tr:nth-child(2n),
 .skill-certificate li:nth-child(2n) {
-  background-color: rgb(127, 167, 98);
+  background-color: rgb(196, 166, 138);
 }
 
 .skill-certificate {
@@ -343,7 +343,7 @@ header a:hover {
   width: 100%;
 
   text-align: center;
-  background-color: aquamarine;
+  background-color: rgb(169, 179, 136);
   display: table;
 }
 .message p {
@@ -361,7 +361,7 @@ header a:hover {
 footer {
   padding: 30px 0 30px 50px;
   text-align: left;
-  background-color: green;
+  background-color: rgb(95, 111, 82);
   color: #eeeeee;
   font-family: "Kanit", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
