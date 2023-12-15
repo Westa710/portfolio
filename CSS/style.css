@@ -102,7 +102,6 @@ header a:hover {
 .pagetop i {
   width: 50px;
   height: 50px;
-  margin-top: 10vh;
   font-size: 10rem;
 }
 .icon {
@@ -196,6 +195,11 @@ header a:hover {
   justify-content: space-around;
   background-color: rgb(185, 148, 112);
   color: white;
+}
+
+.fa-gears,
+.fa-award {
+  margin-right: 10px;
 }
 
 .skill-programming,
@@ -376,7 +380,26 @@ footer {
 
 /* スマホ用スタイル */
 @media (max-width: 600px) {
+  body {
+    font-size: 20px;
+    background-color: #efefef;
+  }
   .pagetop {
-    background-color: red;
+  }
+  .pagetop p {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 7rem;
+    color: #eeeeee;
+    font-family: "Josefin Sans", sans-serif;
+    font-family: "Kanit", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Oswald", sans-serif;
+  }
+  .pagetop i {
+    width: 50px;
+    height: 50px;
+    margin-top: 10vh;
+    font-size: 7rem;
   }
 }
