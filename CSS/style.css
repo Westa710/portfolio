@@ -1,12 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #e2dec9;
-  font-size: 25px;
+  font-size: 20px;
   color: #444444;
 }
 .main-wrapper {
   width: 80%;
-  min-width: 800px;
-  max-width: 1400px;
+  min-width: 700px;
+  max-width: 900px;
   height: 100%;
   margin: 0 auto;
   background-color: #efefef;
@@ -18,7 +22,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-family: "Quicksand", sans-serif;
   font-size: 6rem;
-  color: rgb(95, 111, 82);
+  color: rgb(185, 148, 112);
 }
 
 .fa-user,
@@ -27,21 +31,21 @@ body {
 .fa-newspaper,
 .fa-envelope {
   font-weight: 900;
-  font-size: 80px;
+  font-size: 5rem;
   margin-right: 15px;
   transform: translateY(20px);
-  color: rgb(95, 111, 82);
+  color: rgb(185, 148, 112);
+  display: none;
 }
 
 /* header */
 
 header {
   width: 100%;
-  height: 80px;
+  height: 50px;
   background-color: rgba(0, 0, 0, 0.699);
   color: rgb(143, 142, 142);
   justify-content: center;
-  vertical-align: middle;
   position: fixed;
   z-index: 2;
 }
@@ -53,15 +57,17 @@ header a:hover {
 .header-container {
   display: flex;
   align-items: center;
+  vertical-align: middle;
 }
 
-.header-container ul {
+.nav {
   display: flex;
   list-style-type: none;
-  width: 600px;
+  width: 500px;
+
   justify-content: space-between;
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 20px;
 
   font-family: "Kanit", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
@@ -71,45 +77,119 @@ header a:hover {
 
 .header-container img {
   border-radius: 20%;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
 }
 
-.header-container p {
-  margin-left: 5px;
+.menu-content ul {
+  padding-top: 70px;
+}
+.menu-content ul li {
+  border-bottom: solid 1px #444444;
+  list-style: none;
+  line-height: 33px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.menu-content ul li:hover {
+  background-color: #d6d6d6;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  color: #444444;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: solid 2px #444444;
+  border-right: solid 2px #444444;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 21px;
+}
+
+.menu-content {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color: #efefef;
+  transition: all 0.5s; /*アニメーション設定*/
+}
+
+.gray-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+  left: 30%; /*メニューを画面内へ*/
+}
+
+#menu-btn-check:checked ~ .menu-content ~ .gray-wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 0.5s;
 }
 
 /* 見出し */
 
 .pagetop {
-  display: table;
   height: 100vh;
   width: 100%;
-  background-color: rgb(169, 179, 136);
+  background-color: rgb(185, 148, 112);
 }
 
-.pagetop p {
-  display: table-cell;
-  vertical-align: middle;
+.pagetop {
+  padding-top: 10vh;
   text-align: center;
   font-size: 10rem;
   color: #eeeeee;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Oswald", sans-serif;
 }
 
-.pagetop i {
-  width: 50px;
-  height: 50px;
-  margin-top: 20vh;
-  font-size: 10rem;
+.pagetop-icon {
+  padding-top: 10vh;
+  animation-name: down-arrow;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
+
+@keyframes down-arrow {
+  to {
+    transform: translateY(0);
+  }
+  from {
+    transform: translateY(20px);
+  }
+}
+
 .icon {
   display: flex;
   justify-content: center;
   font-size: 70px;
   padding-bottom: 50px;
-  color: green;
 }
 
 /* profile */
@@ -123,22 +203,22 @@ header a:hover {
 }
 
 .profile-content img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 100%;
   margin: 30px 0 30px 30px;
 }
 
 .profile-content h3 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: 50px;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 .profile-content p {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 200%;
-  padding: 0 50px 0 50px;
+  padding: 0 50px 0 30px;
 }
 
 .profile-item h3 {
@@ -160,22 +240,22 @@ header a:hover {
 }
 
 .works-item {
-  width: 300px;
-  height: 400px;
-  margin: 50px 30px;
+  width: 250px;
+  height: 300px;
+  margin: 30px 15px;
 }
 
 .works-item img {
   width: 100%;
   height: 50%;
-  background-color: lightgreen;
+  background-color: rgb(169, 179, 136);
 }
 
 .works-item p {
   width: 100%;
   height: 50%;
   padding: 10px;
-  background-color: rgb(211, 255, 196);
+  background-color: rgb(169, 179, 136);
   white-space: normal;
   word-wrap: break-word;
   line-height: 150%;
@@ -193,8 +273,13 @@ header a:hover {
 .skill-content {
   display: flex;
   justify-content: space-around;
-  background-color: #5f6f52;
+  background-color: rgb(185, 148, 112);
   color: white;
+}
+
+.fa-gears,
+.fa-award {
+  margin-right: 10px;
 }
 
 .skill-programming,
@@ -204,11 +289,10 @@ header a:hover {
 
 .skill-programming {
   width: 60%;
-  color: #eeeeee;
 }
 
 .skill-programming h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 20px 0;
   font-weight: bolder;
   font-family: "Noto Serif JP", sans-serif;
@@ -216,14 +300,14 @@ header a:hover {
 
 .skill-programming p {
   line-height: 150%;
-  padding: 0 100px 20px;
+  padding: 0 70px 20px;
 }
 
 .skill-programming-main {
   width: 90%;
   margin: auto;
   font-size: 1.5rem;
-  line-height: 4rem;
+  line-height: 3rem;
   /* table style */
   border-collapse: collapse;
 }
@@ -231,38 +315,44 @@ header a:hover {
 .skill-programming-main th {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   /* table style */
   border-bottom: 3px solid white;
 }
 
 .skill-programming-description {
-  margin-top: 70px;
+  margin: 20px;
+  padding-top: 20px;
+  border: white solid 3px;
+  border-radius: 10%;
 }
 
 .skill-programming-description table {
   width: 90%;
-  margin: 10px auto 50px;
-  line-height: 3rem;
+  margin: 10px auto 30px;
+  line-height: 2.5rem;
 }
 
 .skill-programming-description p {
   font-size: 2rem;
   font-weight: bold;
-  text-align: center;
+}
+
+.skill-programming-description td:nth-child(2) {
+  text-align: left;
 }
 
 .skill-programming-description th {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   border-bottom: 3px solid white;
 }
 
 .skill-programming-main tr:nth-child(2n),
 .skill-programming-description tr:nth-child(2n),
 .skill-certificate li:nth-child(2n) {
-  background-color: rgb(127, 167, 98);
+  background-color: rgb(196, 166, 138);
 }
 
 .skill-certificate {
@@ -271,25 +361,27 @@ header a:hover {
 }
 
 .skill-certificate h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   font-weight: bolder;
   font-family: "Noto Serif JP", sans-serif;
 }
 
 .skill-certificate p {
-  padding: 0 20px 20px;
+  padding: 0 30px 20px;
   line-height: 150%;
 }
 
 .skill-certificate li {
   line-height: 200%;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .list-head {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   border-bottom: 3px solid white;
   font-weight: bolder;
 }
@@ -338,12 +430,11 @@ header a:hover {
 
 /* message */
 .message {
-  height: 50vh;
-  min-height: 400px;
+  height: 30vh;
+  min-height: 300px;
   width: 100%;
-
   text-align: center;
-  background-color: aquamarine;
+  background-color: rgb(169, 179, 136);
   display: table;
 }
 .message p {
@@ -354,17 +445,162 @@ header a:hover {
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Oswald", sans-serif;
   font-family: "Quicksand", sans-serif;
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 /* footer */
 footer {
   padding: 30px 0 30px 50px;
   text-align: left;
-  background-color: green;
+  background-color: rgb(95, 111, 82);
   color: #eeeeee;
   font-family: "Kanit", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Oswald", sans-serif;
   font-family: "Quicksand", sans-serif;
+}
+
+/* スマホ用スタイル */
+@media (max-width: 700px) {
+  body {
+    font-size: 20px;
+    background-color: #efefef;
+  }
+
+  .main-wrapper {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  /* header */
+
+  .header-container ul {
+    display: none;
+  }
+
+  .menu-btn {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.5s all;
+  }
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    background-color: #444444;
+    transition: 0.5s all;
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: #444444;
+    transition: 0.5s all;
+  }
+
+  #menu-btn-check:not(checked) ~ .menu-btn span {
+    background-color: white;
+    transition: 0.5s all;
+  }
+  #menu-btn-check:not(checked) ~ .menu-btn span::before {
+    bottom: 8px;
+    background-color: white;
+    transition: 0.5s all;
+  }
+  #menu-btn-check:not(checked) ~ .menu-btn span::after {
+    top: 8px;
+    background-color: white;
+    transition: 0.5s all;
+  }
+
+  /* pagetop */
+
+  .pagetop p {
+    padding-top: 5vh;
+    font-size: 7rem;
+  }
+  .pagetop i {
+    width: 50px;
+    height: 50px;
+    margin-top: 10vh;
+    font-size: 7rem;
+  }
+
+  /* profile */
+
+  .profile .icon {
+    padding-bottom: 0;
+  }
+
+  .profile img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-content {
+    display: block;
+  }
+
+  .icon-letter {
+    font-size: 4rem;
+  }
+
+  .fa-user,
+  .fa-list,
+  .fa-lightbulb,
+  .fa-newspaper,
+  .fa-envelope {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-right: 15px;
+    transform: translateY(15px);
+  }
+
+  /* skill */
+
+  .skill-content {
+    display: block;
+    padding: 30px 0;
+  }
+
+  .skill-programming,
+  .skill-certificate {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .skill h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .skill-certificate {
+    margin-top: 100px;
+  }
 }

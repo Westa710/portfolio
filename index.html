@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="CSS/destyle.css" />
     <link rel="stylesheet" href="CSS/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="images/nishioIcon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +29,21 @@
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald:wght@700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&family=Noto+Sans+JP&family=Oswald:wght@700&family=Quicksand:wght@700&family=Zen+Maru+Gothic:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:ital,wght@1,500&family=Noto+Sans+JP&family=Oswald:wght@700&family=Quicksand:wght@700&family=Zen+Maru+Gothic:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://kit.fontawesome.com/2e0cdc381e.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -36,7 +52,7 @@
       <div class="header-container">
         <a href="#pagetop"><img src="images/nishioIcon.png" alt="head-image" /></a>
         <!-- <p>Westa</p> -->
-        <ul>
+        <ul class="nav">
           <li><a href="#profile">PROFILE</a></li>
           <li><a href="#works">WORKS</a></li>
           <li><a href="#skill">SKILL</a></li>
@@ -44,12 +60,41 @@
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
+
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check" />
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a href="#">TOP</a>
+            </li>
+            <li>
+              <a href="#profile">PROFILE</a>
+            </li>
+            <li>
+              <a href="#works">WORKS</a>
+            </li>
+            <li>
+              <a href="#skill">SKILL</a>
+            </li>
+            <li>
+              <a href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="gray-wrapper"></div>
+      </div>
     </header>
 
     <div class="pagetop" id="pagetop">
-      <p>
-        Nishio's portfolio<br />
-        <i class="fa-solid fa-arrow-down"></i>
+      <p class="pagetop-name">
+        Nishio's<br />
+        portfolio<br />
+      </p>
+      <p class="pagetop-icon">
+        <a href="#profile"><i class="fa-solid fa-arrow-down"></i></a>
       </p>
     </div>
 
