@@ -169,6 +169,7 @@ header a:hover {
 }
 
 .pagetop-icon {
+  text-align: center;
   padding-top: 10vh;
   animation-name: down-arrow;
   animation-duration: 2s;
@@ -295,7 +296,10 @@ header a:hover {
   font-size: 2rem;
   margin: 20px 0;
   font-weight: bolder;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .skill-programming p {
@@ -364,7 +368,10 @@ header a:hover {
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: bolder;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .skill-certificate p {
@@ -590,7 +597,8 @@ footer {
 
   .skill-programming,
   .skill-certificate {
-    width: 80%;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
     margin: 0 auto;
   }
@@ -601,6 +609,17 @@ footer {
   }
 
   .skill-certificate {
+    width: 90%;
     margin-top: 100px;
+  }
+
+  .skill-programming-description p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .pagetop-icon {
+    display: none;
   }
 }
