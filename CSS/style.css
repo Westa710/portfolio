@@ -9,7 +9,7 @@ body {
 }
 .main-wrapper {
   width: 80%;
-  min-width: 600px;
+  min-width: 700px;
   max-width: 900px;
   height: 100%;
   margin: 0 auto;
@@ -169,7 +169,20 @@ header a:hover {
 }
 
 .pagetop-icon {
-  padding-top: 0vh;
+  padding-top: 10vh;
+  animation-name: down-arrow;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes down-arrow {
+  to {
+    transform: translateY(0);
+  }
+  from {
+    transform: translateY(20px);
+  }
 }
 
 .icon {
@@ -448,7 +461,7 @@ footer {
 }
 
 /* スマホ用スタイル */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   body {
     font-size: 20px;
     background-color: #efefef;
