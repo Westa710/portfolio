@@ -1,15 +1,41 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: rgb(205, 224, 184);
-  font-size: 25px;
+  background-color: #e2dec9;
+  font-size: 20px;
   color: #444444;
 }
 .main-wrapper {
   width: 80%;
-  min-width: 800px;
-  max-width: 1400px;
+  min-width: 700px;
+  max-width: 900px;
   height: 100%;
   margin: 0 auto;
   background-color: #efefef;
+}
+
+.icon-letter {
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-size: 6rem;
+  color: rgb(185, 148, 112);
+}
+
+.fa-user,
+.fa-list,
+.fa-lightbulb,
+.fa-newspaper,
+.fa-envelope {
+  font-weight: 900;
+  font-size: 5rem;
+  margin-right: 15px;
+  transform: translateY(20px);
+  color: rgb(185, 148, 112);
+  display: none;
 }
 
 /* header */
@@ -17,95 +43,197 @@ body {
 header {
   width: 100%;
   height: 50px;
-  background-color: rgb(64, 82, 65);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.699);
+  color: rgb(143, 142, 142);
   justify-content: center;
-  vertical-align: middle;
   position: fixed;
+  z-index: 2;
+}
+
+header a:hover {
+  color: white;
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  vertical-align: middle;
 }
 
-.header-container ul {
+.nav {
   display: flex;
   list-style-type: none;
-  width: 600px;
+  width: 500px;
+
   justify-content: space-between;
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 20px;
+
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .header-container img {
-  border-radius: 40%;
+  border-radius: 20%;
+  height: 50px;
+  width: 50px;
 }
 
-.header-container p {
-  margin-left: 5px;
+.menu-content ul {
+  padding-top: 70px;
+}
+.menu-content ul li {
+  border-bottom: solid 1px #444444;
+  list-style: none;
+  line-height: 33px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.menu-content ul li:hover {
+  background-color: #d6d6d6;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  color: #444444;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: solid 2px #444444;
+  border-right: solid 2px #444444;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 21px;
+}
+
+.menu-content {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color: #efefef;
+  transition: all 0.5s; /*アニメーション設定*/
+}
+
+.gray-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+  left: 30%; /*メニューを画面内へ*/
+}
+
+#menu-btn-check:checked ~ .menu-content ~ .gray-wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 0.5s;
 }
 
 /* 見出し */
 
 .pagetop {
-  display: table;
   height: 100vh;
   width: 100%;
-  background-color: rgb(133, 205, 168);
+  background-color: rgb(185, 148, 112);
 }
 
-.pagetop p {
-  display: table-cell;
-  vertical-align: middle;
+.pagetop {
+  padding-top: 10vh;
   text-align: center;
   font-size: 10rem;
   color: #eeeeee;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Oswald", sans-serif;
 }
 
-.pagetop i {
-  width: 50px;
-  height: 50px;
-  margin-top: 20vh;
-  font-size: 10rem;
+.pagetop-icon {
+  text-align: center;
+  padding-top: 10vh;
+  animation-name: down-arrow;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
+
+@keyframes down-arrow {
+  to {
+    transform: translateY(0);
+  }
+  from {
+    transform: translateY(20px);
+  }
+}
+
 .icon {
   display: flex;
   justify-content: center;
   font-size: 70px;
-  padding: 100px 0 50px;
-  color: green;
+  padding-bottom: 50px;
 }
 
 /* profile */
+
+.profile {
+  padding: 100px 0 100px;
+}
 
 .profile-content {
   display: flex;
 }
 
 .profile-content img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 100%;
   margin: 30px 0 30px 30px;
 }
 
 .profile-content h3 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: 50px;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 .profile-content p {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 200%;
-  padding: 0 50px 0 50px;
+  padding: 0 50px 0 30px;
+}
+
+.profile-item h3 {
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* works */
 
+.works {
+  padding: 100px 0 100px;
+}
 .works-container {
   display: flex;
   flex-wrap: wrap;
@@ -113,22 +241,22 @@ header {
 }
 
 .works-item {
-  width: 300px;
-  height: 400px;
-  margin: 50px 30px;
+  width: 250px;
+  height: 300px;
+  margin: 30px 15px;
 }
 
 .works-item img {
   width: 100%;
   height: 50%;
-  background-color: lightgreen;
+  background-color: rgb(169, 179, 136);
 }
 
 .works-item p {
   width: 100%;
   height: 50%;
   padding: 10px;
-  background-color: rgb(211, 255, 196);
+  background-color: rgb(169, 179, 136);
   white-space: normal;
   word-wrap: break-word;
   line-height: 150%;
@@ -139,18 +267,20 @@ header {
 
 /* skill */
 
-/* .skills {
-  
-} */
-
-.skill-content {
-  background-color: rgb(100, 138, 73);
-  color: white;
+.skill {
+  padding: 100px 0 100px;
 }
 
 .skill-content {
   display: flex;
   justify-content: space-around;
+  background-color: rgb(185, 148, 112);
+  color: white;
+}
+
+.fa-gears,
+.fa-award {
+  margin-right: 10px;
 }
 
 .skill-programming,
@@ -160,27 +290,28 @@ header {
 
 .skill-programming {
   width: 60%;
-  color: #eeeeee;
-  background-color: rgb(100, 138, 73);
 }
 
 .skill-programming h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 20px 0;
   font-weight: bolder;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .skill-programming p {
   line-height: 150%;
-  padding: 0 100px 20px;
+  padding: 0 70px 20px;
 }
 
 .skill-programming-main {
   width: 90%;
   margin: auto;
   font-size: 1.5rem;
-  line-height: 4rem;
+  line-height: 3rem;
   /* table style */
   border-collapse: collapse;
 }
@@ -188,38 +319,44 @@ header {
 .skill-programming-main th {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   /* table style */
   border-bottom: 3px solid white;
 }
 
 .skill-programming-description {
-  margin-top: 70px;
+  margin: 20px;
+  padding-top: 20px;
+  border: white solid 3px;
+  border-radius: 10%;
 }
 
 .skill-programming-description table {
   width: 90%;
-  margin: 10px auto 50px;
-  line-height: 3rem;
+  margin: 10px auto 30px;
+  line-height: 2.5rem;
 }
 
 .skill-programming-description p {
   font-size: 2rem;
   font-weight: bold;
-  text-align: center;
+}
+
+.skill-programming-description td:nth-child(2) {
+  text-align: left;
 }
 
 .skill-programming-description th {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   border-bottom: 3px solid white;
 }
 
 .skill-programming-main tr:nth-child(2n),
 .skill-programming-description tr:nth-child(2n),
 .skill-certificate li:nth-child(2n) {
-  background-color: rgb(127, 167, 98);
+  background-color: rgb(196, 166, 138);
 }
 
 .skill-certificate {
@@ -228,25 +365,30 @@ header {
 }
 
 .skill-certificate h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   font-weight: bolder;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .skill-certificate p {
-  padding: 0 20px 20px;
+  padding: 0 30px 20px;
   line-height: 150%;
 }
 
 .skill-certificate li {
   line-height: 200%;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .list-head {
   text-align: left;
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   border-bottom: 3px solid white;
   font-weight: bolder;
 }
@@ -259,7 +401,21 @@ header {
   border: 3px solid blue;
 }
 
+.blog-link p {
+  text-align: center;
+  line-height: 225px;
+}
+
 /* contact */
+.contact {
+  padding: 100px 0 300px;
+}
+
+.contact h1 {
+  text-align: center;
+  line-height: 200%;
+  padding: 50px 10% 100px;
+}
 .contact-piccontainer {
   display: flex;
   justify-content: space-around;
@@ -279,8 +435,191 @@ header {
   text-decoration-line: underline;
 }
 
+/* message */
+.message {
+  height: 30vh;
+  min-height: 300px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(169, 179, 136);
+  display: table;
+}
+.message p {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.5rem;
+}
+
 /* footer */
 footer {
-  padding: 30px 0 10px;
-  text-align: center;
+  padding: 30px 0 30px 50px;
+  text-align: left;
+  background-color: rgb(95, 111, 82);
+  color: #eeeeee;
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* スマホ用スタイル */
+@media (max-width: 700px) {
+  body {
+    font-size: 20px;
+    background-color: #efefef;
+  }
+
+  .main-wrapper {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  /* header */
+
+  .header-container ul {
+    display: none;
+  }
+
+  .menu-btn {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.5s all;
+  }
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    background-color: #444444;
+    transition: 0.5s all;
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: #444444;
+    transition: 0.5s all;
+  }
+
+  #menu-btn-check:not(checked) ~ .menu-btn span {
+    background-color: white;
+    transition: 0.5s all;
+  }
+  #menu-btn-check:not(checked) ~ .menu-btn span::before {
+    bottom: 8px;
+    background-color: white;
+    transition: 0.5s all;
+  }
+  #menu-btn-check:not(checked) ~ .menu-btn span::after {
+    top: 8px;
+    background-color: white;
+    transition: 0.5s all;
+  }
+
+  /* pagetop */
+
+  .pagetop p {
+    padding-top: 5vh;
+    font-size: 7rem;
+  }
+  .pagetop i {
+    width: 50px;
+    height: 50px;
+    margin-top: 10vh;
+    font-size: 7rem;
+  }
+
+  /* profile */
+
+  .profile .icon {
+    padding-bottom: 0;
+  }
+
+  .profile img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-content {
+    display: block;
+  }
+
+  .icon-letter {
+    font-size: 4rem;
+  }
+
+  .fa-user,
+  .fa-list,
+  .fa-lightbulb,
+  .fa-newspaper,
+  .fa-envelope {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-right: 15px;
+    transform: translateY(15px);
+  }
+
+  /* skill */
+
+  .skill-content {
+    display: block;
+    padding: 30px 0;
+  }
+
+  .skill-programming,
+  .skill-certificate {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .skill h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .skill-certificate {
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  .skill-programming-description p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .pagetop-icon {
+    display: none;
+  }
 }

@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="CSS/destyle.css" />
     <link rel="stylesheet" href="CSS/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="images/nishioIcon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,38 +14,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald:wght@600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&family=Noto+Sans+JP&family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&family=Noto+Sans+JP&family=Oswald:wght@700&family=Quicksand:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald:wght@700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&family=Noto+Sans+JP&family=Oswald:wght@700&family=Quicksand:wght@700&family=Zen+Maru+Gothic:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:ital,wght@1,500&family=Noto+Sans+JP&family=Oswald:wght@700&family=Quicksand:wght@700&family=Zen+Maru+Gothic:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://kit.fontawesome.com/2e0cdc381e.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <!-- 画面に常に表示される要素を記述 -->
       <div class="header-container">
-        <img src="images/nishioIcon.png" alt="head-image" height="50" width="50" />
-        <p>Westa</p>
-        <ul>
-          <li>PROFILE</li>
-          <li>WORKS</li>
-          <li>SKILLS</li>
-          <li>BLOG</li>
-          <li>CONTACT</li>
+        <a href="#pagetop"><img src="images/nishioIcon.png" alt="head-image" /></a>
+        <!-- <p>Westa</p> -->
+        <ul class="nav">
+          <li><a href="#profile">PROFILE</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <!-- <li><a href="#blog">BLOG</a></li> -->
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
+      </div>
+
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check" />
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a href="#">TOP</a>
+            </li>
+            <li>
+              <a href="#profile">PROFILE</a>
+            </li>
+            <li>
+              <a href="#works">WORKS</a>
+            </li>
+            <li>
+              <a href="#skill">SKILL</a>
+            </li>
+            <li>
+              <a href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="gray-wrapper"></div>
       </div>
     </header>
 
-    <div class="pagetop">
-      <p>
-        Nishio's portfolio<br />
-        <i class="fa-solid fa-arrow-down"></i>
+    <div class="pagetop" id="pagetop">
+      <p class="pagetop-name">
+        Nishio's<br />
+        portfolio<br />
+      </p>
+      <p class="pagetop-icon">
+        <a href="#profile"><i class="fa-solid fa-arrow-down"></i></a>
       </p>
     </div>
+
     <div class="main-wrapper">
-      <div class="profile">
+      <div class="profile" id="profile">
         <div class="icon">
           <i class="fa-solid fa-user"></i>
-          <div class="icon-letter">PROFILE</div>
+          <p class="icon-letter">PROFILE</p>
         </div>
         <div class="profile-content">
           <div class="profile-item">
@@ -68,53 +126,53 @@
         </div>
       </div>
 
-      <div class="works">
+      <div class="works" id="works">
         <div class="icon">
           <i class="fa-solid fa-list"></i>
-          <span class="icon-letter">WORKS</span>
+          <p class="icon-letter">WORKS</p>
         </div>
 
         <div class="works-container">
           <div class="works-item">
-            <img src="" alt="" />
+            <!-- <img src="" alt="" /> -->
             <p>Coming Soon...</p>
           </div>
 
           <div class="works-item">
-            <img src="" alt="" />
+            <!-- <img src="" alt="" /> -->
             <p>Coming Soon...</p>
           </div>
 
           <div class="works-item">
-            <img src="" alt="" />
+            <!-- <img src="" alt="" /> -->
             <p>Coming Soon...</p>
           </div>
 
           <div class="works-item">
-            <img src="" alt="" />
+            <!-- <img src="" alt="" /> -->
             <p>Coming Soon...</p>
           </div>
 
           <div class="works-item">
-            <img src="" alt="" />
+            <!-- <img src="" alt="" /> -->
             <p>Coming Soon...</p>
           </div>
 
           <div class="works-item">
-            <img src="" alt="" />
+            <!-- <img src="" alt="" /> -->
             <p>Coming Soon...</p>
           </div>
         </div>
       </div>
 
-      <div class="skills">
+      <div class="skill" id="skill">
         <div class="icon">
           <i class="fa-solid fa-lightbulb"></i>
-          <span class="icon-letter">SKILL</span>
+          <p class="icon-letter">SKILL</p>
         </div>
         <div class="skill-content">
           <div class="skill-programming">
-            <h3><i class="fa-solid fa-gears"></i>プログラミング</h3>
+            <h3><i class="fa-solid fa-gears"></i>Programming</h3>
             <p>実務経験が全くないので、これまでに使用したことのある言語やツールを紹介します</p>
             <table class="skill-programming-main">
               <tr>
@@ -124,7 +182,7 @@
               </tr>
 
               <tr>
-                <td>HTML&CSS</td>
+                <td>HTML・CSS</td>
                 <td>1年</td>
                 <td>★☆☆☆☆</td>
               </tr>
@@ -167,7 +225,7 @@
           </div>
 
           <div class="skill-certificate">
-            <h3><i class="fa-solid fa-award"></i>資格</h3>
+            <h3><i class="fa-solid fa-award"></i>Certificate</h3>
             <p>IPAの資格と英語学習を中心に取得を進めてきました。これからはベンダー資格のほうにも手を出していきたいと考えています。</p>
             <ul>
               <li class="list-head">名称</li>
@@ -191,20 +249,25 @@
         </div>
       </div>
 
-      <div class="blog">
+      <!-- <div class="blog" id="blog">
         <div class="icon">
           <i class="fa-solid fa-newspaper"></i>
-          <span class="icon-letter">BLOG</span>
+          <p class="icon-letter">BLOG</p>
         </div>
         <div class="blog-content">「こいつどんな人間なの？」と気になったらこちらもチェックしてみてください。たまに更新する予定です。</div>
-        <div class="blog-link"><a href="./blog/index.html"></a></div>
-      </div>
+        <div class="blog-link"><p>Coming Soon...</p></div>
+      </div> -->
 
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="icon">
           <i class="fa-solid fa-envelope"></i>
           <span class="icon-letter">CONTACT</span>
         </div>
+        <h1>
+          私が普段使っているSNSです。(Xは訪問頻度すくなめ) <br />
+          連絡はメッセージとかに遠慮なくどうぞ。
+        </h1>
+
         <div class="contact-piccontainer">
           <div class="contact-piccontainer-item">
             <a href="https://github.com/Westa710" target="_blank" rel="noopener noreferrer"
@@ -225,6 +288,10 @@
             >
           </div>
         </div>
+      </div>
+
+      <div class="message">
+        <p>Thank you for reading!!</p>
       </div>
 
       <footer>
